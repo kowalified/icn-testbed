@@ -1,0 +1,32 @@
+---
+
+- hosts: ubuntu-c
+  tasks:
+    - name: create a test user and ssh keys 
+      user:
+        name: test
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/id_rsa
+
+- hosts: ubuntu1
+  tasks: 
+    - name: Create test user on ubuntu1
+      user: 
+        name: test
+        shell: /bin/bash
+    - name: Create .ssh folder
+      file:
+        path: ~test/.ssh
+        state: directory
+        owner: test
+        group: test
+        mode: 0700
+    - name: Upload SSH key
+      copy:
+        src: ./keys/id_rsa.pub
+        dest: ~test/.ssh/authorized_keys
+        owner: test
+        group: test
+        mode: 0700
+...
