@@ -40,8 +40,11 @@ Tasks performed on management node before a new node is added:
 * Update ansible database (/hosts):
 
   Username, hostname, locations (geo), v4 address, v6 address
+  
   Add new node to DNS server
+  
   Update hostkey file (roles/etcfiles/files/ssh_known_hosts)
+  
   Update user file (roles/users/vars/ICN-users.yml)
 
 ### Ansible workflow
