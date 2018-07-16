@@ -33,7 +33,7 @@ Tasks performed on management node before a new node is added:
 
   Institution, contact, email, participant's username, installation username & password
   
-  Participant's SSH key (roles/users/files/keys/<ORG>/<ORG>.sshkeys)
+  Participant's SSH key (roles/users/files/keys/ORG/ORG.sshkeys)
     
     place the ssh keys in home/${username}/ssh-keys
   
