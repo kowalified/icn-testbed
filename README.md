@@ -41,11 +41,11 @@ Tasks performed on management node before a new node is added:
 
 ### Ansible workflow
 
-. Perform a bunch of pre-tasks
-.. setup proxy configuration, upgrade box, check if machine has already been provisioned, ping tests, check architecture, check ubuntu version
-. etcfiles
-.. update hostname, timezone, ssh_known_hosts
-. apt
-.. auto upgrade settings, setup LXC repo
-. users
-.. add users to node (admin vs. user), set permissions, add .ssh dir, add ssh keys, clean up provisioning user
+* Perform a bunch of pre-tasks
+** setup proxy configuration, upgrade box, check if machine has already been provisioned, ping tests, check architecture, check ubuntu version
+* etcfiles
+** update hostname, timezone, ssh_known_hosts
+* apt
+** auto upgrade settings, setup LXC repo
+* users
+** add users to node (admin vs. user), set permissions, add .ssh dir, add ssh keys, clean up provisioning user
