@@ -2,8 +2,6 @@ GROUPS:
   icn-admins:
     gid: 6000
     sudo: true
-  icn-users:
-    gid: 5000
 
 USERS:
   john-admin:
