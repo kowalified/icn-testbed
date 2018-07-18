@@ -1,0 +1,12 @@
+GROUPS:
+  icn-users:
+    gid: 5000
+
+USERS:
+  test-user:
+    state: present
+    company: 'Test User Corp.'
+    email: 'test@user.io'
+    uid: 5001
+    groups:
+      - icn-users

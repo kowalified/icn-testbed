@@ -1,0 +1,10 @@
+---
+- name: "Load user class variables"
+  include_vars: "{{ class }}.yml"
+
+- name: "Add groups for class {{ class }}"
+  group:
+    name: "{{ item.key }}"
+    state: "{{ item.value.state | default('present') }}"
+    gid: "{{ item.value.gid }}"
+  with_dict: "{{ GROUPS }}"

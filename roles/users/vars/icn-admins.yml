@@ -1,0 +1,20 @@
+GROUPS:
+  icn-admins:
+    gid: 6000
+    sudo: true
+  icn-users:
+    gid: 5000
+
+USERS:
+  john-admin:
+    state: present
+    company: 'Johnny Admin'
+    email: john@admin.io
+    uid: 6001
+    shell: /bin/bash
+    groups:
+      - icn-admins
+      - icn-users
+sshkeys:
+  - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0zRdkpCneOJ1HGYPgKplFr6RateY3Z5UEXzEaEKkoyz82NgGYGUx89VphRWLn+BN5bONM8FLpd8Ks11S4gweI42YRGDpId3GlV85nNKFfyKr5UrpVM5FqPBPqlrp5+hAhX4Dymat/5hC0BFC6Vdgl1b2r//SYZpl26Qo85R/LiR5c2aM1AoNWRJcniMqOgIaW40hT3Ce11cxEnaL1qMCyDorW2Rzy1M9sdx/2HU57FOiLIK6vuiMrgvg5ctZ5de26cicVu7brENwzDrkSJ44ahuYwz8e3Wit6y7QIqTMuwhtRSXsvMKBr/8l00oAnNZutsMeTuzBDotYSbRDqSATB john-admin@ubuntu-c"
+
