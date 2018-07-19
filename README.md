@@ -3,6 +3,7 @@ Ansible playbooks for maintaining the ICN testbed
 
 ## ICN testbed Ansible documentation
 coming soon.
+dev test machines: goo.gl/b68auU
 
 ## ICN testbed network design
 ICN nodes are standard x86 servers that run open source software and are used to forward ICN traffic between each other.
