@@ -8,3 +8,14 @@
     state: "{{ item.value.state | default('present') }}"
     gid: "{{ item.value.gid }}"
   with_dict: "{{ GROUPS }}"
+
+- name: "Set up sudo access for groups"
+  lineinfile:
+    dest: /etc/sudoers
+    regexp: '^%{{ item.key }}'
+    line: '%{{ item.key }} ALL=(ALL) NOPASSWD: ALL'
+    state: "{% if item.value.sudo | default(False) | bool() %}present{% else %}absent{% endif %}"
+  with_dict: "{{ GROUPS }}"
+
+- name: "Run play to create users"
+  include: user_tasks.yml ENTRIES={{ USERS }}
