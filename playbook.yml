@@ -1,5 +1,5 @@
 ---
 - hosts: ubuntu1
   roles: 
-    - { role: users, class: icn-admins, tags: icn-admins }
     - { role: users, class: icn-users, tags: icn-users }
+    - { role: users, class: icn-admins, tags: icn-admins }
